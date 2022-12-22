@@ -33,3 +33,10 @@ db.sequelize=sequelize
 
 db.products=require("./productModel")(sequelize,DataTypes);
 db.reviews=require("./reviewsModel")(sequelize,DataTypes);
+
+db.sequelize.sync({force:false})
+.then(()=>{
+    console.log('resync done');
+})
+
+module.exports=db;
