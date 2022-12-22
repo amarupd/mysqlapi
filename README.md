@@ -8,3 +8,4 @@ npm i express
 npm i mysql2
 npm i body-parser
 npm i sequelize
+npm i cors
