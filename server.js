@@ -9,6 +9,7 @@ var corOptions = {
     origin: 'https://localhost:8001'
 };
 
+
 //middleware
 
 app.use(cors(corOptions));
@@ -16,6 +17,12 @@ app.use(cors(corOptions));
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
+
+
+//routes
+
+const router=require("./routes/productRoutes");
+app.use('/api/products',router);
 
 app.get("", (req, res) => {
     res.json({ message: 'hello from api' });
