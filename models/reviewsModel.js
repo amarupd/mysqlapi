@@ -7,5 +7,5 @@ module.exports=(sequelize,DataTypes)=>{
             type:DataTypes.TEXT
         }
     });
-    return Reviews;
+    return Review;
 }

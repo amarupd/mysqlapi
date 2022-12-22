@@ -14,5 +14,5 @@ module.exports=(sequelize,DataTypes)=>{
             type:DataTypes.BOOLEAN
         }
     });
-    return products;
+    return Product;
 }

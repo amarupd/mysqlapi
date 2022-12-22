@@ -1,5 +1,6 @@
 const db = require("../models");
 
+
 //create our main model
 
 const Product = db.products
