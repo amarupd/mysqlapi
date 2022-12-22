@@ -24,6 +24,8 @@ app.use(express.urlencoded({ extended: true }));
 const router=require("./routes/productRoutes");
 app.use('/api/products',router);
 
+
+
 app.get("", (req, res) => {
     res.json({ message: 'hello from api' });
 });
