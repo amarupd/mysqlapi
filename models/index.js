@@ -27,3 +27,9 @@ sequelize.authenticate()
 .catch(err=>{
     console.log('error:'+err);
 })
+const db={}
+db.Sequelize=Sequelize
+db.sequelize=sequelize
+
+db.products=require("./productModel")(sequelize,DataTypes);
+db.reviews=require("./reviewsModel")(sequelize,DataTypes);
