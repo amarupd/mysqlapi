@@ -1,6 +1,5 @@
 const db = require("../models");
 
-
 //create our main model
 
 const Product = db.products
@@ -54,14 +53,14 @@ const deleteProduct = async (req, res) => {
 
 //publish product
 
-const publishedProduct=async(req,res)=>{
-    const product=await Product.findAll({where:{published:true}})
+const publishedProduct = async (req, res) => {
+    const product = await Product.findAll({ where: { published: true } })
     res.status(200).send(products)
 }
 
 //export all the controls
 
-module.exports={
+module.exports = {
     addProduct,
     getAllProduct,
     getSingleProduct,
