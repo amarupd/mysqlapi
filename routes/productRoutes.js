@@ -6,7 +6,7 @@ router.post('/addProduct', productController.addProduct);
 
 router.get('/allProducts', productController.getAllProduct);
 
-router.get('/publishedProduct', productController.publishedProduct);
+router.get('/published', productController.publishedProduct);
 
 
 

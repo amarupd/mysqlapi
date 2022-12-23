@@ -14,7 +14,7 @@ const addProduct = async (req, res) => {
         title: req.body.title,
         price: req.body.price,
         description: req.body.description,
-        published: req.body.published ? req.body.products : false
+        published: req.body.published ? req.body.published : false
     }
 
     const product = await Product.create(info)
@@ -41,7 +41,7 @@ const getSingleProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
     let Id = req.params.id;
     const product = await Product.update(req.body, { where: { id: Id } })
-    res.status(200).send(product);
+    res.status(200).send("results updated succesfully");
 }
 
 //soft delete
@@ -56,7 +56,7 @@ const deleteProduct = async (req, res) => {
 
 const publishedProduct = async (req, res) => {
     const product = await Product.findAll({ where: { published: true } })
-    res.status(200).send(products)
+    res.status(200).send(product)
 }
 
 //export all the controls
