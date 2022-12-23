@@ -61,14 +61,15 @@ const publishedProduct = async (req, res) => {
 
 //connect one to many relating product and reviews
 
-const getProductReviews=async(req,res)=>{
-    const data=await Product.findAll({
-        include:[{
-            model:Review,
-            as:'review'
+const getProductReviews = async (req, res) => {
+    const data = await Product.findAll({
+        include: [{
+            model: Review,
+            as: 'review'
         }],
-        where:{id:2}
+        where: { id: 2 }
     })
+    res.status(200).send(data)
 }
 
 //export all the controls
