@@ -24,7 +24,16 @@ const getAllReviews = async (req, res) => {
     res.status(200).send(reviews)
 }
 
+//get by id 
+
+const getReviewById = async (req, res) => {
+    let Id = req.params.id;
+    const review = await Reviews.findOne({ where: { id: Id } });
+    res.status(200).send(review);
+}
+
 module.exports = {
     addReview,
-    getAllReviews
+    getAllReviews,
+    getReviewById
 }
