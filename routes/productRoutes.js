@@ -17,6 +17,8 @@ router.post('/addreviews',reviewController.addReview)
 
 router.get('/allreviews',reviewController.getAllReviews)
 
+router.get('/:id',reviewController.getReviewById)
+
 
 router.get('/:id', productController.getSingleProduct);
 
