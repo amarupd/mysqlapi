@@ -36,7 +36,7 @@ const getReviewById = async (req, res) => {
 
 const updateReview = async (req, res) => {
     let Id = req.params.id;
-    const review = await Reviews.update(req.body,{ where: { id: Id } });
+    const review = await Reviews.update(req.body, { where: { id: Id } });
     res.status(200).send(review);
 }
 

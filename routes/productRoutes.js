@@ -1,7 +1,7 @@
 //importing controllers product and reviews
 
 const productController = require("../controller/productController")
-const reviewController=require("../controller/reviewController")
+const reviewController = require("../controller/reviewController")
 
 const router = require("express").Router();
 
@@ -13,13 +13,13 @@ router.get('/published', productController.publishedProduct);
 
 //review url and controllers
 
-router.post('/addreviews',reviewController.addReview)
+router.post('/addreviews', reviewController.addReview)
 
-router.get('/allreviews',reviewController.getAllReviews)
+router.get('/allreviews', reviewController.getAllReviews)
 
-router.get('/:id',reviewController.getReviewById)
+router.get('/:id', reviewController.getReviewById)
 
-router.put('/review/:id',reviewController.updateReview)
+router.put('/review/:id', reviewController.updateReview)
 
 router.get('/:id', productController.getSingleProduct);
 
