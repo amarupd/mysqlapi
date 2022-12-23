@@ -15,7 +15,7 @@ router.get('/published', productController.publishedProduct);
 
 router.post('/addreviews',reviewController.addReview)
 
-router.get('/allreviews',reviewController.gatAllReviews)
+router.get('/allreviews',reviewController.getAllReviews)
 
 
 router.get('/:id', productController.getSingleProduct);

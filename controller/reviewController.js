@@ -1,31 +1,30 @@
-const db=require("..//models")
+const db = require("..//models")
 
 //model
 
-const Reviews=db.reviews;
+const Reviews = db.reviews;
 
 //function
 //aadd revieew
 
-const addReview=async(req,res)=>
-{
-    let data={
-        rating:req.body.rating,
+const addReview = async (req, res) => {
+    let data = {
+        rating: req.body.rating,
         description: req.body.description
     }
-    const review=await Review.create(data)
+    const review = await Reviews.create(data)
     res.status(200).send(review)
 }
 
 
 //get all the reviews
 
-const getAllReviews=async(req,res)=>{
-    const reviews=await Review.findAll({})
-    res.status(200).send(review)
+const getAllReviews = async (req, res) => {
+    const reviews = await Reviews.findAll({})
+    res.status(200).send(reviews)
 }
 
-module.exports={
+module.exports = {
     addReview,
     getAllReviews
 }
