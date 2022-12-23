@@ -13,17 +13,17 @@ router.get('/published', productController.publishedProduct);
 
 //review url and controllers
 
-router.post('/addreviews', reviewController.addReview)
+router.post('/addreviews', reviewController.addReview);
 
-router.get('/allreviews', reviewController.getAllReviews)
+router.get('/allreviews', reviewController.getAllReviews);
 
-// router.get('/productReviews', reviewController.getProductReviews)
+router.get('/getpr',productController.getProductReviews)
 
 
 
-router.get('/:id', reviewController.getReviewById)
+router.get('/:id', reviewController.getReviewById);
 
-router.put('/review/:id', reviewController.updateReview)
+router.put('/review/:id', reviewController.updateReview);
 
 router.get('/:id', productController.getSingleProduct);
 

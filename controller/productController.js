@@ -57,19 +57,18 @@ const deleteProduct = async (req, res) => {
 const publishedProduct = async (req, res) => {
     const product = await Product.findAll({ where: { published: true } })
     res.status(200).send(product)
-}
+};
 
 //connect one to many relating product and reviews
 
-const getProductReviews = async (req, res) => {
-    const data = await Product.findAll({
-        include: [{
-            model: Review,
-            as: 'review'
+const getProductReviews=async(req,res)=>{
+    const data=await Product.findAll({
+        include:[{
+            model:Review,
+            as:'reviews'
         }],
-        where: { id: 2 }
+        where:{id:2}
     })
-    res.status(200).send(data)
 }
 
 //export all the controls
@@ -82,4 +81,4 @@ module.exports = {
     deleteProduct,
     publishedProduct,
     getProductReviews
-}
+};
