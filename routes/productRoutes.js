@@ -1,3 +1,5 @@
+//importing controllers product and reviews
+
 const productController = require("../controller/productController")
 const reviewController=require("../controller/reviewController")
 
@@ -9,6 +11,11 @@ router.get('/allProducts', productController.getAllProduct);
 
 router.get('/published', productController.publishedProduct);
 
+//review url and controllers
+
+router.post('/addreviews',reviewController.addReview)
+
+router.get('/allreviews',reviewController.gatAllReviews)
 
 
 router.get('/:id', productController.getSingleProduct);
