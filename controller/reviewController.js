@@ -24,3 +24,8 @@ const getAllReviews=async(req,res)=>{
     const reviews=await Review.findAll({})
     res.status(200).send(review)
 }
+
+module.exports={
+    addReview,
+    getAllReviews
+}
