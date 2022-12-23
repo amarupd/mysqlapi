@@ -17,6 +17,14 @@ router.post('/addreviews', reviewController.addReview)
 
 router.get('/allreviews', reviewController.getAllReviews)
 
+router.get('/productReviews', reviewController.getProductReviews)
+
+
+
+
+
+
+
 router.get('/:id', reviewController.getReviewById)
 
 router.put('/review/:id', reviewController.updateReview)

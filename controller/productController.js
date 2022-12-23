@@ -59,6 +59,18 @@ const publishedProduct = async (req, res) => {
     res.status(200).send(product)
 }
 
+//connect one to many relating product and reviews
+
+const getProductReviews=async(req,res)=>{
+    const data=await Product.findAll({
+        include:[{
+            model:Review,
+            as:'review'
+        }],
+        where:{id:2}
+    })
+}
+
 //export all the controls
 
 module.exports = {
@@ -67,5 +79,6 @@ module.exports = {
     getSingleProduct,
     updateProduct,
     deleteProduct,
-    publishedProduct
+    publishedProduct,
+    getProductReviews
 }
