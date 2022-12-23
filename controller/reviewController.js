@@ -32,8 +32,17 @@ const getReviewById = async (req, res) => {
     res.status(200).send(review);
 }
 
+//update review
+
+const updateReview = async (req, res) => {
+    let Id = req.params.id;
+    const review = await Reviews.update(req.body,{ where: { id: Id } });
+    res.status(200).send(review);
+}
+
 module.exports = {
     addReview,
     getAllReviews,
-    getReviewById
+    getReviewById,
+    updateReview
 }
