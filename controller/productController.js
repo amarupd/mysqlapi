@@ -65,10 +65,11 @@ const getProductReviews=async(req,res)=>{
     const data=await Product.findAll({
         include:[{
             model:Review,
-            as:'reviews'
+            as:'review'
         }],
-        where:{id:2}
+        where:{id:1}
     })
+    res.status(200).send(data)
 }
 
 //export all the controls
