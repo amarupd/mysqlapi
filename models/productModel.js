@@ -12,7 +12,7 @@ module.exports=(sequelize,DataTypes)=>{
         },
         published:{
             type:DataTypes.BOOLEAN
-        }
+        } 
     });
     return Product;
 }
