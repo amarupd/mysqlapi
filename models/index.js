@@ -31,6 +31,8 @@ const db = {}
 db.Sequelize = Sequelize
 db.sequelize = sequelize
 
+//requiring all the information from the tables 
+
 db.products = require("./productModel")(sequelize, DataTypes);
 db.reviews = require("./reviewsModel")(sequelize, DataTypes);
 
