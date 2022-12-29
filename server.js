@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
-const port=process.env.PORT || 8001;
+const port = process.env.PORT || 8001;
 
 const app = express();
 
@@ -21,8 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 
 //routes
 
-const router=require("./routes/productRoutes");
-app.use('/api/products',router);
+const router = require("./routes/productRoutes");
+app.use('/api/products', router);
 
 
 
@@ -32,6 +32,6 @@ app.get("", (req, res) => {
 
 //port
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`listening to port number : ${port}`);
 });
