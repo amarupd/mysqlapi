@@ -1,0 +1,17 @@
+server
+
+config
+
+index
+
+
+model
+
+
+controller
+
+
+routes
+
+
+these are the way to create folder and files
